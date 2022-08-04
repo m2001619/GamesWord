@@ -1,0 +1,656 @@
+{
+    "header" : {
+        "title": "GW",
+        "img": "http://bassmagroup.com/assets/imgs/megamenu.png",
+        "titles": [
+          "articles",
+          "gallery",
+          "features",
+          "testimonials",
+          "team-member",
+          "services",
+          "our-skills",
+          "how-it-works",
+          "events",
+          "pricing-plans",
+          "top-videos",
+          "stats",
+          "request-a-discount"
+        ]
+      },
+      "landing" : {
+        "h2": "Welcome, To GamesWorld",
+        "p": "Here Iam gonna share everything about my life. Books Iam reading,\n    Games Iam Playing, Stories and Events",
+        "img": "https://webaxis.ca/images/service/affordable-web-design.png"
+      },
+      "article" : {
+        "title": "ARRTICLE",
+        "cards": [
+          {
+            "img": "https://images.alphacoders.com/113/thumb-1920-1136137.jpg",
+            "h3": "Call Of Duty",
+            "p": "Call of Duty is a first-person shooter video game franchise published by Activision. Starting out in 2003, it first focused on games set in World War II",
+            "a": "https://www.callofduty.com/"
+          },
+          {
+            "img": "https://picfiles.alphacoders.com/192/thumb-192039.jpg",
+            "h3": "Battlefield",
+            "p": "A battlefield, battleground, or field of battle is the location of a present or historic battle involving ground warfare",
+            "a": "https://www.ea.com/games/battlefield"
+          },
+          {
+            "img": "https://images7.alphacoders.com/941/thumbbig-941884.webp",
+            "h3": "PUBG",
+            "p": "PUBG: Battlegrounds (previously known as PlayerUnknown's Battlegrounds) is a battle royale game developed and published by PUBG Studios, a subsidiary of Krafton",
+            "a": "https://na.battlegrounds.pubg.com/"
+          },
+          {
+            "img": "https://images3.alphacoders.com/915/thumbbig-915847.webp",
+            "h3": "Free Fire",
+            "p": "Free Fire is a 2016 British black comedy-action film directed by Ben Wheatley, from a screenplay by Wheatley and Amy Jump",
+            "a": "https://ff.garena.com/"
+          },
+          {
+            "img": "https://images7.alphacoders.com/421/thumbbig-421641.webp",
+            "h3": "GTA V",
+            "p": "Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games",
+            "a": "https://gta5grand.com/en?ref=1018&gclid=Cj0KCQjwuO6WBhDLARIsAIdeyDLdBWz1wG90a1aggotLqu0ZhlowP-YIUTRkQYRc9b-bZCTU3ZtgH54aAhUhEALw_wcB"
+          },
+          {
+            "img": "https://images5.alphacoders.com/319/thumbbig-319578.webp",
+            "h3": "Need For Speed",
+            "p": "Need for Speed (NFS) is a racing video game franchise published by Electronic Arts and currently developed by Criterion Games, the developers of Burnout",
+            "a": "https://www.ea.com/games/need-for-speed"
+          },
+          {
+            "img": "https://images4.alphacoders.com/104/thumbbig-1046343.webp",
+            "h3": "PES",
+            "p": "Gameplay simulates a typical game of association football, with the player controlling either an entire team or a selected playe",
+            "a": "https://www.konami.com/wepes/2020/eu/en/ps4/"
+          },
+          {
+            "img": "https://images.alphacoders.com/150/thumbbig-150123.webp",
+            "h3": "WWE 2K",
+            "p": "WWE 2K is a series of professional wrestling sports simulation video games that launched in 2000. The premise of the series is to emulate professional wrestling, and more specifically, that of WWE.",
+            "a": "https://wwe.2k.com/"
+          }
+        ]
+      },
+      "gallery": {
+        "title": "GALLERY",
+        "id": "gallery",
+        "images": [
+          "http://bassmagroup.com/assets/imgs/gallery-01.png",
+          "http://bassmagroup.com/assets/imgs/gallery-02.png",
+          "http://bassmagroup.com/assets/imgs/gallery-03.jpg",
+          "http://bassmagroup.com/assets/imgs/gallery-04.png",
+          "http://bassmagroup.com/assets/imgs/gallery-05.jpg",
+          "http://bassmagroup.com/assets/imgs/gallery-06.png"
+        ]
+      },
+      "features": {
+        "title": "FEATURES",
+        "id": "features",
+        "cards": [
+          {
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToir4wRaD18b6EwtGGXrq6HpVrVncH9EIKo1mbVWoLbnn-RKVE9kXfCkErJjFdwX4OiDg&usqp=CAU",
+            "title": "Quality",
+            "p": "Corporate executives and consumers have in recent years adopted divergent views of product quality. Several recent surveys indicate how wide the quality perception gap is",
+            "a": {
+              "link": "https://hbr.org/1983/07/quality-is-more-than-making-a-good-product",
+              "text": "More"
+            }
+          },
+          {
+            "img": "https://www.mayoclinichealthsystem.org/-/media/national-files/images/hometown-health/2020/clock-face-for-daylight-saving-time.jpg",
+            "title": "Time",
+            "p": "ime is of the essence. This holds particularly true for busy college students trying to stay on top of class schedules, deadlines, part-time jobs and their social lives",
+            "a": {
+              "link": "https://www.studyinternational.com/news/time-saving-hacks-for-college-students/",
+              "text": "More"
+            }
+          },
+          {
+            "img": "https://assets.thehansindia.com/h-upload/2021/07/31/1092868-passion.webp",
+            "title": "Passion",
+            "p": "Discovering our own passions in life, experiencing moments that help us find happiness, success & joy are paramount for our overall well being",
+            "a": {
+              "link": "https://www.thehansindia.com/life-style/finding-your-passion-699140",
+              "text": "More"
+            }
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "TESTIMONIALS",
+        "id": "testimonials",
+        "cards": [
+          {
+            "name": "Mohamed Ibrahim",
+            "job": "Full Stack Developer",
+            "stars": 4,
+            "gender": "male",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          },
+          {
+            "name": "Mohamed Farag",
+            "job": "Full Stack Developer",
+            "stars": 4,
+            "gender": "male",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          },
+          {
+            "name": "Shady Nabil",
+            "job": "Full Stack Developer",
+            "stars": 4,
+            "gender": "male",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          },
+          {
+            "name": "Amr Hendawy",
+            "job": "Full Stack Developer",
+            "stars": 5,
+            "gender": "male",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          },
+          {
+            "name": "Eye Radwan",
+            "job": "Full Stack Developer",
+            "stars": 3,
+            "gender": "female",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          },
+          {
+            "name": "Osama Mohamed",
+            "job": "Full Stack Developer",
+            "stars": 3,
+            "gender": "male",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          }
+        ]
+      },
+      "games": {
+        "title": "Games",
+        "id": "team-member",
+        "cards": [
+          {
+            "img": "https://images.alphacoders.com/113/thumb-1920-1136137.jpg",
+            "name": "Call Of Duty",
+            "text": "War Game",
+            "socialMedia": [
+              "https://www.facebook.com/CallofDutyMEARA/?brand_redir=229899403738458",
+              "https://twitter.com/CallofDuty",
+              "https://www.instagram.com/callofduty/",
+              "https://www.youtube.com/c/CallofDuty"
+            ]
+          },
+          {
+            "img": "https://picfiles.alphacoders.com/192/thumb-192039.jpg",
+            "name": "Battlefield",
+            "text": "War Game",
+            "socialMedia": [
+              "https://www.facebook.com/battlefield",
+              "https://twitter.com/Battlefield",
+              "https://www.instagram.com/battlefield/",
+              "https://www.youtube.com/c/Battlefield"
+            ]
+          },
+          {
+            "img": "https://images7.alphacoders.com/941/thumbbig-941884.webp",
+            "name": "PUBG",
+            "text": "War Game",
+            "socialMedia": [
+              "https://www.facebook.com/gaming/pubgbattlegrounds",
+              "https://twitter.com/PUBG",
+              "https://www.instagram.com/pubg_battlegrounds_global/",
+              "https://www.youtube.com/c/PUBG"
+            ]
+          },
+          {
+            "img": "https://images3.alphacoders.com/915/thumbbig-915847.webp",
+            "name": "Free Fire",
+            "text": "War Game",
+            "socialMedia": [
+              "https://www.facebook.com/gaming/garenafreefire",
+              "https://twitter.com/FreeFireTales",
+              "https://www.instagram.com/freefireofficial.eu/",
+              "https://www.youtube.com/c/GarenaFreeFireT%C3%BCrkiye"
+            ]
+          },
+          {
+            "img": "https://images7.alphacoders.com/421/thumbbig-421641.webp",
+            "name": "GTA V",
+            "text": "Action-adventure game",
+            "socialMedia": [
+              "https://www.facebook.com/grandtheftautoV",
+              "https://twitter.com/RockstarGames",
+              "https://www.instagram.com/rockstargames/",
+              "https://www.youtube.com/c/RockstarGames"
+            ]
+          },
+          {
+            "img": "https://images5.alphacoders.com/319/thumbbig-319578.webp",
+            "name": "Need For Speed",
+            "text": "Speed Game",
+            "socialMedia": [
+              "https://www.facebook.com/needforspeed",
+              "https://twitter.com/NeedforSpeed",
+              "https://www.instagram.com/needforspeed/",
+              "https://www.youtube.com/c/NeedforSpeed"
+            ]
+          },
+          {
+            "img": "https://images2.alphacoders.com/104/thumbbig-1046336.webp",
+            "name": "eFootball",
+            "text": "Football Game",
+            "socialMedia": [
+              "https://www.facebook.com/playeFootball",
+              "https://twitter.com/eFootballPro",
+              "https://www.instagram.com/efootball/",
+              "https://www.youtube.com/c/PlayeFootball"
+            ]
+          },
+          {
+            "img": "https://images2.alphacoders.com/121/thumbbig-1216705.webp",
+            "name": "WWE 2K",
+            "text": "WWE Game",
+            "socialMedia": [
+              "https://www.facebook.com/WWEgames",
+              "https://twitter.com/WWEgames",
+              "https://www.instagram.com/wwegames/",
+              "https://www.youtube.com/c/wwe2k"
+            ]
+          }
+        ]
+      },
+      "services": {
+        "title": "SERVICES",
+        "id": "services",
+        "cards": [
+          {
+            "title": "Security",
+            "a": {
+              "link": "https://en.wikipedia.org/wiki/Security_hacker",
+              "text": "Details"
+            }
+          },
+          {
+            "title": "Fixing Issues",
+            "a": {
+              "link": "https://en.wikipedia.org/wiki/Automatic_bug_fixing",
+              "text": "Details"
+            }
+          },
+          {
+            "title": "Location",
+            "a": {
+              "link": "https://en.wikipedia.org/wiki/Google_Maps",
+              "text": "Details"
+            }
+          },
+          {
+            "title": "Coding",
+            "a": {
+              "link": "https://en.wikipedia.org/wiki/Programming_language",
+              "text": "Details"
+            }
+          },
+          {
+            "title": "Design",
+            "a": {
+              "link": "https://en.wikipedia.org/wiki/Web_design",
+              "text": "Details"
+            }
+          },
+          {
+            "title": "Marketing",
+            "a": {
+              "link": "https://en.wikipedia.org/wiki/Marketing_research",
+              "text": "Details"
+            }
+          }
+        ]
+      },
+      "ourSkills": {
+        "title": "OUR SKILLS",
+        "id": "our-skills",
+        "img": "https://ekare.ai/wp-content/uploads/2019/12/banner-API-2.png",
+        "skills": [
+          {
+            "title": "HTML",
+            "range": "80"
+          },
+          {
+            "title": "CSS",
+            "range": "85"
+          },
+          {
+            "title": "JS",
+            "range": "70"
+          },
+          {
+            "title": "Paython",
+            "range": "80"
+          }
+        ]
+      },
+      "howItWork": {
+        "title": "HOW IT WORKS",
+        "id": "how-it-works",
+        "img": "http://bassmagroup.com/assets/imgs/work-steps.png",
+        "cards": [
+          {
+            "img": "http://bassmagroup.com/assets/imgs/work-steps-1.png",
+            "title": "Business Analysis",
+            "p": "We seek for Bassma Group to be the best company in the field of organizing exhibitions, conferences and advertising and marketing operations to provide customers with the convenience of thinking, effort and time due to the company’s deep experience and multiple capabilities that give us confidence in the implementation of various projects in this field, and our future goal is to put Bassma Company Krupp imprint success and brilliance in all Iraqi provinces."
+          },
+          {
+            "img": "http://bassmagroup.com/assets/imgs/work-steps-2.png",
+            "title": "Company Goals",
+            "p": "The most important messages of Bassma Group are to provide a work environment conducive to creativity and work in multiple partnerships in the spirit of one team to diversify ideas and increase creativity and increase attention to details and factors of success of the activity"
+          }
+        ]
+      },
+      "events": {
+        "title": "LATEST EVENTS",
+        "id": "events",
+        "img": "https://s3.amazonaws.com/libapps/accounts/43802/images/best-pr-firms-awards.png",
+        "event": {
+          "date": [
+            {
+              "number": 56,
+              "text": "Days"
+            },
+            {
+              "number": 12,
+              "text": "Hours"
+            },
+            {
+              "number": 56,
+              "text": "Minutes"
+            },
+            {
+              "number": 56,
+              "text": "Seconds"
+            }
+          ],
+          "title": "Tech Masters Event 2023",
+          "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero\n      tenetur doloremque iusto ut adipisci quam ratione aliquam\n      excepturi nulla in harum, veritatis porro"
+        }
+      },
+      "pricingPlans" : {
+        "title": "PRAICING PLANS",
+        "id": "pricing-plans",
+        "cards": [
+          {
+            "type": "Basic",
+            "img": "https://www.yourmsp.com.au/wp-content/uploads/2021/04/vps-icon.svg",
+            "sell": "$15",
+            "time": "Per Month",
+            "inf": [
+              "10GB HDD Space",
+              "5 Email Addresses",
+              "2 Subdomains",
+              "4 Databases",
+              "Basic Support"
+            ],
+            "a": {
+              "link": "#chose-plan",
+              "text": "Choose Plan"
+            }
+          },
+          {
+            "type": "Advanced",
+            "img": "https://www.yourmsp.com.au/wp-content/uploads/2021/04/vps-icon.svg",
+            "sell": "$15",
+            "time": "Per Month",
+            "inf": [
+              "10GB HDD Space",
+              "5 Email Addresses",
+              "2 Subdomains",
+              "4 Databases",
+              "Basic Support"
+            ],
+            "a": {
+              "link": "#chose-plan",
+              "text": "Choose Plan"
+            }
+          },
+          {
+            "type": "Basic",
+            "img": "https://www.yourmsp.com.au/wp-content/uploads/2021/04/vps-icon.svg",
+            "sell": "$15",
+            "time": "Per Month",
+            "inf": [
+              "10GB HDD Space",
+              "5 Email Addresses",
+              "2 Subdomains",
+              "4 Databases",
+              "Basic Support"
+            ],
+            "a": {
+              "link": "#chose-plan",
+              "text": "Choose Plan"
+            }
+          }
+        ]
+      },
+      "topVideos": {
+        "title": "Top Videos",
+        "id": "top-videos",
+        "videos": [
+          {
+            "a": {
+              "link": "TSAtjKZ0k6s",
+              "text": "Rebirth of the Dead Trailer | Call of Duty: Warzone"
+            },
+            "time": "00:42"
+          },
+          {
+            "a": {
+              "link": "2Hfeb7eIzbo",
+              "text": "Battlefield 2042 | Season 1: Zero Hour Gameplay Trailer"
+            },
+            "time": "01:51"
+          },
+          {
+            "a": {
+              "link": "LhH2hCCjb4U",
+              "text": "DESTON Gameplay Trailer|PUBG"
+            },
+            "time": "02:42"
+          },
+          {
+            "a": {
+              "link": "xY8M7aiwH7s",
+              "text": "Free Fire x Baklava Etkinliği Resmi Videosu | Garena Free Fire"
+            },
+            "time": "01:46"
+          },
+          {
+            "a": {
+              "link": "1xlr3-hK5rY",
+              "text": "GTA Online: The Criminal Enterprises Now Available"
+            },
+            "time": "00:29"
+          },
+          {
+            "a": {
+              "link": "HLiY6wwfGX4",
+              "text": "Need for Speed Hot Pursuit Remastered"
+            },
+            "time": "00:37"
+          },
+          {
+            "a": {
+              "link": "K84Mt8FhgME",
+              "text": "eFootball™ Official Gameplay Trailer"
+            },
+            "time": "06:43"
+          },
+          {
+            "a": {
+              "link": "qCOLlcYYT00",
+              "text": "WWE 2K22 IS STUPENDOUS! 👊💥"
+            },
+            "time": "00:39"
+          }
+        ]
+      },
+      "awesomeStats" : {
+        "title": "Our Awesome Stats",
+        "id": "stats",
+        "img": "http://bassmagroup.com/assets/imgs/stats.jpg",
+        "cards": [
+          {
+            "number": 150,
+            "text": "Clients"
+          },
+          {
+            "number": 135,
+            "text": "Projects"
+          },
+          {
+            "number": 50,
+            "text": "Countries"
+          },
+          {
+            "number": 500,
+            "text": "Money"
+          }
+        ]
+      },
+      "discount": {
+        "title": "We Have A Discount",
+        "id": "request-a-discount",
+        "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi\n    asperiores consectetur, recusandae ratione provident necessitatibus,\n    cumque delectus commodi fuga praesentium beatae. Totam vel similique\n    laborum dicta aperiam odit doloribus corporis.",
+        "img": "http://bassmagroup.com/assets/imgs/discount.png",
+        "bgImg": "https://technonguide.com/wp-content/uploads/2021/07/Discount-Offer-768x542.jpg",
+        "form": {
+          "title": "Request A Discount"
+        }
+      },
+      "users" : [
+        {
+          "name": "Mohamed Ibrahim",
+          "email": "mohammedibrahim@gmail.com",
+          "phone": "5111111111",
+          "job": "Full Stack",
+          "stars": 5,
+          "gender": "male",
+          "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Mohamed Farag",
+          "email": "mohamedfarag@gmail.com",
+          "phone": "5111111112",
+          "job": "Back End",
+          "stars": 4,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Shady Nabil",
+          "email": "shadynabil@gmail.com",
+          "phone": "5111111113",
+          "job": "Front End",
+          "stars": 4,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Amr Hendawy",
+          "email": "amrhendawy@gmail.com",
+          "phone": "5111111114",
+          "job": "JavaScript Developer",
+          "stars": 5,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Eye Radwan",
+          "email": "eyeradwan@gmail.com",
+          "phone": "5111111115",
+          "job": "Full Stack",
+          "stars": 3,
+          "gender": "female",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Osama Mohamed",
+          "email": "osamamohamed@gmail.com",
+          "phone": "5111111116",
+          "job": "Back End",
+          "stars": 3,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        }
+      ],
+      "footer": {
+        "title": "D3",
+        "socialMedia": [
+          {
+            "link": "https://github.com/m2001619"
+          },
+          {
+            "link": "https://www.linkedin.com/in/mohammed-radwan-555432209/"
+          }
+        ],
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus\n    nulla rem, dignissimos iste aspernatur",
+        "links": [
+          {
+            "link": "#",
+            "text": "Important Link 1"
+          },
+          {
+            "link": "#",
+            "text": "Important Link 2"
+          },
+          {
+            "link": "#",
+            "text": "Important Link 3"
+          },
+          {
+            "link": "#",
+            "text": "Important Link 4"
+          },
+          {
+            "link": "#",
+            "text": "Important Link 5"
+          }
+        ],
+        "contectUs": [
+          {
+            "text": [
+              "Turkey, Kayseri, Inside The city, Room Number 220"
+            ]
+          },
+          {
+            "text": [
+              "Business Hours: From 10:00 To 18:00"
+            ]
+          },
+          {
+            "text": [
+              "+90555555555",
+              "+90555555555"
+            ]
+          }
+        ],
+        "images": [
+          "http://bassmagroup.com/assets/imgs/gallery-01.png",
+          "http://bassmagroup.com/assets/imgs/gallery-02.png",
+          "http://bassmagroup.com/assets/imgs/gallery-03.jpg",
+          "http://bassmagroup.com/assets/imgs/gallery-04.png",
+          "http://bassmagroup.com/assets/imgs/gallery-05.jpg",
+          "http://bassmagroup.com/assets/imgs/gallery-06.png"
+        ],
+        "copyright": {
+          "text": "Made With ",
+          "a": {
+            "link": "https://github.com/m2001619",
+            "text": "Mohammed Radwan"
+          }
+        }
+      }
+}
