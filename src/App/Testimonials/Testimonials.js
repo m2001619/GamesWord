@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../Global/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-const Testimonials = ({ props }) => {
+const Testimonials = ({ props, users }) => {
   const style = {
     testimonials: `pt-mainPadding pb-20 bg-bgColor relative`,
     container: `container flex justify-center flex-wrap gap-mainGap pt-mainPadding`,
@@ -13,7 +13,8 @@ const Testimonials = ({ props }) => {
     job: `text-[#777] text-lg font-semibold`,
     text: `text-[#777] leading-relaxed text-lg font-semibold`,
   };
-  const cards = props.cards.map((e, i) => {
+  const cards = users.map((e, i) => {
+    const name = e.name.split(" ").map((e) => e.charAt(0).toUpperCase() + e.slice(1)).join(" ");
     let img =
       e.gender === `male`
         ? `https://avatars.githubusercontent.com/u/10234267?v=4`
@@ -24,11 +25,12 @@ const Testimonials = ({ props }) => {
     }
     return (
       <div className={style.infCard} key={i}>
-        <h3 className={style.name}>{e.name}</h3>
+        <h3 className={style.name}>{name}</h3>
         <div className={style.image}>
           <img className={style.img} src={img} alt="" />
         </div>
         <p className={style.job}>{e.job}</p>
+        <p className={style.job}>{e.email}</p>
         <div>
           {starsArr.map((e, i) => {
             return (

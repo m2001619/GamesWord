@@ -3,12 +3,11 @@ import {faShuffle} from "@fortawesome/free-solid-svg-icons";
 import React, { Fragment, useState } from "react";
 import Title from "../Global/Title";
 const TopVideos = ({ props }) => {
-  let s = document.createElement(`div`);
-  s.style.backgroundColor = ``;
-  let [source, setSource] = useState("");
+  const defaultLink = `https://www.youtube.com/embed/` + props.videos[0].a.link;
+  const [source, setSource] = useState(defaultLink);
   const style = {
     topVideos: `pt-mainPadding pb-20 relative`,
-    container: `container flex-col lg:flex-row flex bg-bgColor h-[500px]`,
+    container: `container flex-col lg:flex-row flex bg-bgColor h-[900px] lg:h-[500px]`,
     videosNames: `overflow-y-scroll relative h-[430px]`,
     topVideo: `p-5 bg-[#f4f4f4] flex justify-between items-center`,
     h3: `font-bold`,
@@ -17,8 +16,7 @@ const TopVideos = ({ props }) => {
     active: `bg-[#fafafa] [&:hover>.name]:bg-mainAltColor`,
     name: `name font-semibold text-black leading-relaxed transition-all duration-300`,
     time: `text-[#777] mt-3 cursor-pointer`,
-    imageText: `w-full  p-3 flex flex-col justify-between`,
-    img: `w-full h-full`,
+    imageText: `w-full h-full p-3 flex flex-col justify-between`,
     p: `bg-white p-5 font-semibold`,
   };
 

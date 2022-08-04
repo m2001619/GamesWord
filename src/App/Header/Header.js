@@ -3,18 +3,14 @@ import MegaMenu from "./Mega Menu/MegaMenu";
 
 const Header = ({props}) => {
   const [megaMenu, setMegaMenu] = useState(""); 
-  const [check, setCheck] = useState(false);
   const getMegaMenu = (e) => {
     setMegaMenu(e);
   }
   const handleMegaMenu = () => {
-    if(!check){
       megaMenu.style.cssText = `opacity: 1;z-index: 1;`;
-      setCheck(true);
-    }else {
-      megaMenu.style.cssText = `opacity: 0;z-index: 0;top:`;
-      setCheck(false);
-    }
+      setTimeout(() => {
+      megaMenu.style.cssText = `opacity: 0;z-index: 0;`;
+      },5000)
   }
   const otherLinks = [];
   const style = {

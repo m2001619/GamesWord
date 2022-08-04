@@ -527,44 +527,65 @@
         "img": "http://bassmagroup.com/assets/imgs/discount.png",
         "bgImg": "https://technonguide.com/wp-content/uploads/2021/07/Discount-Offer-768x542.jpg",
         "form": {
-          "title": "Request A Discount",
-          "inputs": [
-            {
-              "type": "text",
-              "name": "name",
-              "id": "name",
-              "placeholder": "Your Name"
-            },
-            {
-              "type": "email",
-              "name": "email",
-              "id": "email",
-              "placeholder": "Your Email"
-            },
-            {
-              "type": "text",
-              "name": "phone",
-              "id": "phone",
-              "placeholder": "Your Phone"
-            },
-            {
-              "type": "text",
-              "name": "job",
-              "id": "job",
-              "placeholder": "Your Job"
-            }
-          ],
-          "textArea": {
-            "name": "tell-us",
-            "id": "tell-us",
-            "placeholder": "Tell Us About You"
-          },
-          "submit": {
-            "type": "submit",
-            "value": "Send"
-          }
+          "title": "Request A Discount"
         }
       },
+      "users" : [
+        {
+          "name": "Mohamed Ibrahim",
+          "email": "mohammedibrahim@gmail.com",
+          "phone": "5111111111",
+          "job": "Full Stack",
+          "stars": 5,
+          "gender": "male",
+          "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Mohamed Farag",
+          "email": "mohamedfarag@gmail.com",
+          "phone": "5111111112",
+          "job": "Back End",
+          "stars": 4,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Shady Nabil",
+          "email": "shadynabil@gmail.com",
+          "phone": "5111111113",
+          "job": "Front End",
+          "stars": 4,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Amr Hendawy",
+          "email": "amrhendawy@gmail.com",
+          "phone": "5111111114",
+          "job": "JavaScript Developer",
+          "stars": 5,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Eye Radwan",
+          "email": "eyeradwan@gmail.com",
+          "phone": "5111111115",
+          "job": "Full Stack",
+          "stars": 3,
+          "gender": "female",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        },
+        {
+          "name": "Osama Mohamed",
+          "email": "osamamohamed@gmail.com",
+          "phone": "5111111116",
+          "job": "Back End",
+          "stars": 3,
+          "gender": "male",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+        }
+      ],
       "footer": {
         "title": "D3",
         "socialMedia": [

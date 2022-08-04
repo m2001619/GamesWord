@@ -16,7 +16,7 @@ const AwesomeStats = ({ props }) => {
     awesomeStats: `py-mainPadding relative`,
     awesomeStatsBefore: `absolute bg-[#ffffffe6] w-full h-full top-0 left-0`,
     h2: `my-10 mx-auto w-max font-bold text-4xl relative`,
-    container: `container relative flex justify-center items-center p-mainPadding gap-mainGap`,
+    container: `container relative flex flex-wrap justify-center items-center p-mainPadding gap-mainGap`,
     card: `w-56 flex flex-col items-center bg-white p-5 gap-4 relative opacity-80 transition-all duration-300 hover:opacity-100 [&:hover>.cardBefore]:h-full [&:hover>.cardAfter]:h-full`,
     cardBefore: `cardBefore absolute bg-mainColor w-[2px] h-0 left-0 bottom-0 transition-all duration-700`,
     cardAfter: `cardAfter absolute bg-mainColor w-[2px] h-0 right-0 top-0 transition-all duration-700`,

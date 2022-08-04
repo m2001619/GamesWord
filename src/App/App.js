@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import json from './.json';
+import React, { createContext, useEffect, useState } from "react";
+import json from "./.json";
 import Header from "./Header/Header";
 import Landing from "./Landing/Landing";
 import Articles from "./Articles/Articles";
@@ -18,7 +18,7 @@ import Discount from "./Discount/Discount";
 import Footer from "./Footer/Footer";
 import Search from "./Search/Search";
 
-
+export const context = createContext(null);
 function App() {
   const [header, setHeader] = useState(json.header);
   const [landing, setLanding] = useState(json.landing);
@@ -35,39 +35,45 @@ function App() {
   const [topVideos, setTopVideos] = useState(json.topVideos);
   const [awesomeStats, setAwesomeStats] = useState(json.awesomeStats);
   const [discount, setDiscount] = useState(json.discount);
+  const [users, setUsers] = useState(json.users);
   const [footer, setFooter] = useState(json.footer);
-  
+
   const [render, setRender] = useState(true);
-  const getDate = (data) => {
-    if(data){
-      setTestimonials(data);
+  const getUserData = (data) => {
+    if (data) {
+      data.stars = 1;
+      setUsers((e) => {
+        e.push(data);
+        return e;
+      });
     }
     setRender((e) => !e);
-    return testimonials;
-  }
-  useEffect(() => {},[render]);
-
+  };
+  useEffect(() => {}, [render]);
 
   return (
-    <div className="App">
+    <context.Provider
+      value={{ getUserData: getUserData, users: users }}
+      className="App"
+    >
       <Header props={header} />
       <Landing props={landing} />
-      <Search/>
+      <Search />
       <Articles props={article} />
       <Gallery props={gallery} />
       <Features props={features} />
-      <Testimonials props={testimonials} />
+      <Testimonials props={testimonials} users={users} />
       <Games props={games} />
       <Services props={services} />
       <OurSkills props={ourSkills} />
       <HowItWork props={howItWork} />
-      <Events props={events} setEvents={setEvents}/>
+      <Events props={events} setEvents={setEvents} />
       <PricingPlans props={pricingPlans} />
       <TopVideos props={topVideos} />
       <AwesomeStats props={awesomeStats} />
-      <Discount props={discount} setTestimonials={setTestimonials} sendData={getDate} />
+      <Discount props={discount} />
       <Footer props={footer} />
-    </div>
+    </context.Provider>
   );
 }
 

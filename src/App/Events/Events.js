@@ -79,9 +79,6 @@ useEffect(() => {
     text: `text-center`,
     h2: `text-3xl mb-5 font-bold`,
     p: `text-[#777] text-lg`,
-    form: `w-[100%] md:w-[600px] bg-[#f6f5f5] p-8 flex justify-center gap-3 rounded-0 md:rounded-[50px] flex-col md:flex-row`,
-    email: `w-full md:w-3/4 border-0 py-4 px-5 caret-mainColor rounded-none md:rounded-3xl transition-all duration-300 focus-visible:outline-[0px] focus-within:placeholder:text-white placeholder:transition-all placeholder:duration-300`,
-    submit: `border-0 bg-mainColor p-4 text-white font-bold cursor-pointer rounded-0 md:rounded-3xl`,
   }  
   const date = props.event.date.map((e, i) => {
     return (
@@ -107,10 +104,6 @@ useEffect(() => {
             </div>
           </div>
         </div>
-        <form action="" className={style.form}>
-          <input className={style.email} type="email" name="" id="text" placeholder="Enter your email" />
-          <input className={style.submit} type="submit" value="Subscribe" />
-        </form>
       </div>
     </div>
   );
