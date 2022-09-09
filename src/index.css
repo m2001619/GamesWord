@@ -28,6 +28,9 @@
   opacity: 1;
   z-index: -1;
 }
+
+/* Gallery and services */
+
 .gellery-before, .services-before {
   background-image: linear-gradient(135deg, #fff 25%, transparent 25%),
     linear-gradient(225deg, #fff 25%, transparent 25%);
@@ -37,24 +40,7 @@
 .features>.container>div:hover a {
   color: #fff !important;
 }
-.features>.container>div:hover a>span {
-  left: 0;
-}
-.features>.container>div:hover>span {
-  transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-}
-/* Team Member */
-.member-card:hover>span {
-  width: 100%;
-}
-.member-card:hover>img {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-}
+
 /* Services */
 .services-card:hover>span {
   transform: scale(1);

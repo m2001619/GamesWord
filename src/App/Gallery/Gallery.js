@@ -1,32 +1,41 @@
 import React from "react";
 import Title from "../Global/Title";
-const Gallery = ({ props }) => {
-  const style = {
-    gellery : `pt-mainPadding pb-20 bg-bgColor relative`,
-    gelleryBefore : `gellery-before absolute w-full h-7 top-0`,
-    container : `flex justify-center flex-wrap gap-mainGap`,
-    galleryImage : `w-[350px] h-[350px] bg-white p-4`,
-    div : `overflow-hidden relative [&:hover>span]:animate-full`,
-    divBefore : `absolute bg-[#ededed] opacity-20 left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2`,
-    img : `w-full relative transition-all duration-300 hover:scale-125 hover:rotate-12`,
+import { classnames, scale, rotate } from "tailwindcss-classnames";
 
-  }  
+const Gallery = ({ props }) => {
+  console.count("Re-render Gallery");
+
+  // Images Component
   const cards = props.images.map((e, i) => {
     return (
-      <div className={style.galleryImage} key={i}>
-        <div className={style.div}>
-          <span className={style.divBefore}></span>  
-          <img className={style.img} src={e} alt=""/>
+      <div className="w-[350px] h-[350px] bg-white p-4" key={i}>
+        <div
+          className={classnames(
+            "overflow-hidden relative",
+            "[&:hover>span]:animate-full"
+          )}
+        >
+          <span className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 bg-[#ededed] opacity-20"></span>
+          <img
+            className={classnames(
+              scale("hover:scale-125"),
+              rotate("hover:rotate-12"),
+              "w-full relative transition-all duration-300"
+            )}
+            src={e}
+            alt=""
+          />
         </div>
       </div>
     );
   });
+
   return (
-    <div className={style.gellery} id={props.id}>
-      <span className={style.gelleryBefore}></span>  
+    <div className="relative pt-mainPadding pb-20 bg-bgColor" id={props.id}>
+      <span className="gellery-before w-full h-7 absolute top-0"></span>
       <Title title={props.title} />
-      <div className={style.container}>{cards}</div>
+      <div className="flex justify-center flex-wrap gap-mainGap">{cards}</div>
     </div>
   );
 };
-export default Gallery;
+export default React.memo(Gallery);

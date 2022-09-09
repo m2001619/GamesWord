@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
+import React, { useContext, useEffect, useState } from "react";
+import { useFieldArray, useForm, Controller } from "react-hook-form";
 import { context } from "../../App";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
+// Input Component
 const Input = ({ register, placeholder, type, name, rules }) => {
   return (
     <input
@@ -12,25 +13,24 @@ const Input = ({ register, placeholder, type, name, rules }) => {
       style={{
         outline: `none`,
       }}
-      className="border-0 bg-[#f9f9f9] p-4 w-72 border-b-[1px] border-b-[#ccc] mb-6 caret-mainColor"
+      className="border-0 border-b-[1px] border-b-[#ccc] w-72 p-4 mb-6 bg-[#f9f9f9] caret-mainColor"
       {...register(name, rules)}
     />
   );
 };
 
+// Form Component
 const Form = ({ title }) => {
   const MySwal = withReactContent(Swal);
   const sendUserData = useContext(context).getUserData;
   const users = useContext(context).users;
-  const emails = users.map((e) => e.email);
-  const phones = users.map((e) => e.phone);
-  const [textArea, setTextArea] = useState("");
   const [selected, setSelected] = useState("");
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    control,
   } = useForm({
     defaultValues: {
       name: ``,
@@ -38,32 +38,45 @@ const Form = ({ title }) => {
       email: ``,
       job: ``,
       gender: ``,
-      text: textArea,
     },
   });
-  const checkPhone = (phone) => phones.includes(phone);
-  const checkEmail = (email) => emails.includes(email);
-  const checkForm = (data) => {
-    if (checkPhone(data.phone)) {
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: "skills",
+  });
+
+  useEffect(() => append({ skill: "" }), []);
+
+  // Check Error In Form Function
+  const checkErrorInForm = (data) => {
+    const emails = users.map((e) => e.email);
+    const phones = users.map((e) => e.phone);
+    if (phones.includes(data.phone)) {
       return "phone number has been used by another account";
-    } else if (checkEmail(data.email)) {
+    } else if (emails.includes(data.email)) {
       return "email has been used by another account";
     }
   };
+
+  // Success Submit
   const onSuccessSubmit = (data) => {
-    if (checkForm(data)) {
-      MySwal.fire("Error", checkForm(data), "error");
+    data.skills = data.skills.map((e) => Object.values(e)[0]);
+    if (checkErrorInForm(data)) {
+      MySwal.fire("Error", checkErrorInForm(data), "error");
       return false;
     }
-    data.text = textArea;
     sendUserData(data);
     reset();
     setSelected("");
     MySwal.fire("Completed", "you have login successfuly", "success");
+    append({ skill: "" });
   };
+
+  // Error Submit
   const onErrorSubmit = () => {
     console.log(errors);
   };
+
   return (
     <form
       className="w-full lg:w-1/2 py-20 px-0 flex justify-center items-center flex-col"
@@ -134,7 +147,7 @@ const Form = ({ title }) => {
           register={register}
         />
         <p className="absolute bottom-1 text-sm text-red-700">
-          {errors.email?.message}
+          {errors.phone?.message}
         </p>
       </div>
       <div className="relative mb-2">
@@ -200,21 +213,42 @@ const Form = ({ title }) => {
           {errors.gender?.message}
         </p>
       </div>
-      <textarea
-        {...register("text", {
-          value: textArea,
-          onChange: (e) => {
-            setTextArea(e.target.value);
-          },
-        })}
-        style={{
-          outline: `none`,
-        }}
-        className="border-0 bg-[#f9f9f9] p-4 w-72 border-b-[1px] border-b-[#ccc] mb-6 caret-mainColor"
-        placeholder="Tell Us About You"
-        cols="30"
-        rows="10"
-      ></textarea>
+      <ul className="w-72 flex flex-col p-3 mb-5 border-2 rounded-md">
+        <label className="py-2 mb-3 ml-1">Add your hobbies</label>
+        {fields.map((item, index) => (
+          <li key={item.id} className="flex justify-between items-center mb-2">
+            <Controller
+              rules={{ required: "Enter a skill" }}
+              render={({ field }) => (
+                <input
+                  style={{ outline: `none` }}
+                  className="border-0 border-b-[1px] border-b-[#ccc] w-44 p-4 bg-[#f9f9f9] caret-mainColor"
+                  placeholder={"skill " + (index + 1)}
+                  {...field}
+                />
+              )}
+              name={`skills.${index}.skill`}
+              control={control}
+            />
+            {index > 0 && (
+              <button
+                className="w-16 p-1 border-0 rounded-md bg-mainAltColor text-md cursor-pointer text-white"
+                type="button"
+                onClick={() => remove(index)}
+              >
+                Delete
+              </button>
+            )}
+          </li>
+        ))}
+        <button
+          className="w-48 p-1 border-0 rounded-md mt-5 bg-mainAltColor text-lg cursor-pointer text-white font-bold"
+          type="button"
+          onClick={() => append({ skill: "" })}
+        >
+          Add another skill
+        </button>
+      </ul>
       <input
         className="bg-mainAltColor border-0 text-xl cursor-pointer text-white font-bold rounded-none p-4 w-72"
         type="submit"

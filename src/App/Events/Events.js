@@ -1,106 +1,92 @@
 import React, { useEffect, useState } from "react";
 import Title from "../Global/Title";
+import { classnames, display, borderColor } from "tailwindcss-classnames";
 
-const Events = ({ props, sendTime }) => {
-  /*  */
-  /* let [time, setTime] = useState([
-    {
-      number: props.event.date[0].number,
-      text: `Days`,
-    },
-    {
-      number: props.event.date[1].number,
-      text: `Hours`,
-    },
-    {
-      number: props.event.date[2].number,
-      text: `Minutes`,
-    },
-    {
-      number: props.event.date[3].number,
-      text: `Seconds`,
-    }
-  ]);
-  let counter = setInterval(() => {
-    setTime((e) => {
-      e[3].number--;
-      return e;
-    })
-    if(time[3].number<0){
-      setTime((e) => {
-        e[2].number--;
-        return e;
-      })  
-        if(time[2].number<0){
-          setTime((e) => {
-            e[1].number--;
-            return e;
-          })
-            if(time[1].number<0){
-              setTime((e) => {
-                e[0].number--;
-                return e;
-              })
-                if(time[0].number<0){
-                    clearInterval(counter);
-                }
-                setTime((e) => {
-                  e[1] = 23;
-                  return e;
-                })
+const Events = ({ props }) => {
+  console.count("Re-render Event");
+  const [second, setSecond] = useState(props.event.date[3].number);
+  const [minute, setMinute] = useState(props.event.date[2].number);
+  const [hour, setHour] = useState(props.event.date[1].number);
+  const [day, setDay] = useState(props.event.date[0].number);
+
+   useEffect(() => {
+    const secondInterval = setInterval(() => {
+      if(second === 0 & minute === 0 & hour === 0 & day ===0){
+        clearInterval(secondInterval);
+      } else {
+        if (second > 0) {
+          setSecond((prevState) => --prevState);
+        } else {
+          setSecond(59);
+          if (minute > 0) {
+            setMinute((prevState) => --prevState);
+          } else {
+            setMinute(59);
+            if (hour > 0) {
+              setHour((prevState) => --prevState);
+            } else {
+              setHour(23);
+              if (day > 0) {
+                setDay((prevState) => --prevState);
+              }
             }
-            setTime((e) => {
-              e[2] = 59;
-              return e;
-            })
+          }
         }
-        setTime((e) => {
-          e[1] = 59;
-          return e;
-        })
-    }
-}, 1000);
-useEffect(() => {
-  sendTime(time);
-},[time]) */
+      }
+    }, 1000);
+    return () => clearInterval(secondInterval);
+  }, [second, minute]);
 
-  /*  */
-  const style = {
-    events: `pt-mainPadding pb-20 relative`,
-    container: `gap-20 flex items-center flex-col py-mainPadding px-20`,
-    container1: `w-full flex justify-center items-center gap-20 p-mainPadding`,
-    image: `hidden lg:block w-[800px]`,
-    img: `w-full`,
-    dateText: `flex justify-center items-center flex-col gap-mainGap`,
-    date: `flex gap-[14px]`,
-    divDate: `flex justify-center items-center flex-col border-[1px] border-[#ddd] rounded-md transition-all duration-300 hover:border-mainColor [&:hover>.time]:border-mainColor`,
-    number: `flex justify-center items-center text-3xl h-[70px] w-[75px] font-bold text-mainColor`,
-    time: `time py-3 px-0 border-t-2 border-t-[#ddd] w-full text-center text-sm transition-all duration-300`,
-    text: `text-center`,
-    h2: `text-3xl mb-5 font-bold`,
-    p: `text-[#777] text-lg`,
-  }  
+  // Date Cards
   const date = props.event.date.map((e, i) => {
     return (
-      <div className={style.divDate} key={i}>
-        <span className={style.number}>{e.number}</span>
-        <span className={style.time}>{e.text}</span>
+      <div
+        className={classnames(
+          borderColor("border-[#ddd]", "hover:border-mainColor"),
+          "[&:hover>.time]:border-mainColor",
+          "flex flex-col justify-center items-center border-[1px] rounded-md transition-all duration-300"
+        )}
+        key={i}
+      >
+        <span className="h-[70px] w-[75px] flex justify-center items-center font-bold text-3xl text-mainColor">
+          {i === 0
+            ? day > 9
+              ? day
+              : `0${day}`
+            : i === 1
+            ? hour > 9
+              ? hour
+              : `0${hour}`
+            : i === 2
+            ? minute > 9
+              ? minute
+              : `0${minute}`
+            : second > 9
+            ? second
+            : `0${second}`}
+        </span>
+        <span className="time w-full py-3 px-0 border-t-2 border-t-[#ddd] text-center text-sm transition-all duration-300">
+          {e.text}
+        </span>
       </div>
     );
   });
+
   return (
-    <div className={style.events} id={props.id}>
+    <div className="relative pt-mainPadding pb-20" id={props.id}>
       <Title title={props.title} />
-      <div className={style.container}>
-        <div className={style.container1}>
-          <div className={style.image}>
-            <img className={style.img} src={props.img} alt="" />
+      <div className="flex items-center flex-col gap-20 py-mainPadding px-20">
+        <div className="w-full flex justify-center items-center gap-20 p-mainPadding">
+          <div
+            className={classnames(display("hidden", "lg:block"), "w-[800px]")}
+          >
+            <img className="w-full" src={props.img} alt="" />
           </div>
-          <div className={style.dateText}>
-            <div className={style.date}>{date}</div>
-            <div className={style.text}>
-              <h2 className={style.h2}>{props.event.title}</h2>
-              <p className={style.p}>{props.event.p}</p>
+          <div className="flex flex-col justify-center items-center gap-mainGap">
+            <div className="flex gap-[14px]">{date}</div>
+            <div className="text-center">
+              <h2 className="text-3xl mb-5 font-bold">{props.event.title}</h2>
+              <p className="text-[#777] text-lg">{props.event.p}</p>
             </div>
           </div>
         </div>
@@ -109,6 +95,4 @@ useEffect(() => {
   );
 };
 
-export default Events;
-
-
+export default React.memo(Events);

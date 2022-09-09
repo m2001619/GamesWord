@@ -123,51 +123,7 @@
       },
       "testimonials": {
         "title": "TESTIMONIALS",
-        "id": "testimonials",
-        "cards": [
-          {
-            "name": "Mohamed Ibrahim",
-            "job": "Full Stack Developer",
-            "stars": 4,
-            "gender": "male",
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
-          },
-          {
-            "name": "Mohamed Farag",
-            "job": "Full Stack Developer",
-            "stars": 4,
-            "gender": "male",
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
-          },
-          {
-            "name": "Shady Nabil",
-            "job": "Full Stack Developer",
-            "stars": 4,
-            "gender": "male",
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
-          },
-          {
-            "name": "Amr Hendawy",
-            "job": "Full Stack Developer",
-            "stars": 5,
-            "gender": "male",
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
-          },
-          {
-            "name": "Eye Radwan",
-            "job": "Full Stack Developer",
-            "stars": 3,
-            "gender": "female",
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
-          },
-          {
-            "name": "Osama Mohamed",
-            "job": "Full Stack Developer",
-            "stars": 3,
-            "gender": "male",
-            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
-          }
-        ]
+        "id": "testimonials"
       },
       "games": {
         "title": "Games",
@@ -358,19 +314,19 @@
         "event": {
           "date": [
             {
-              "number": 56,
+              "number": 12,
               "text": "Days"
             },
             {
-              "number": 12,
+              "number": 1,
               "text": "Hours"
             },
             {
-              "number": 56,
+              "number": 5,
               "text": "Minutes"
             },
             {
-              "number": 56,
+              "number": 10,
               "text": "Seconds"
             }
           ],
@@ -538,7 +494,7 @@
           "job": "Full Stack",
           "stars": 5,
           "gender": "male",
-          "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          "skills": ["HTML", "CSS", "JS", "TSC", "C#", "JAVA",".NET"]
         },
         {
           "name": "Mohamed Farag",
@@ -547,7 +503,7 @@
           "job": "Back End",
           "stars": 4,
           "gender": "male",
-          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          "skills": ["HTML", "CSS", "JS", "TSC", "C#", "JAVA",".NET"]
         },
         {
           "name": "Shady Nabil",
@@ -556,7 +512,7 @@
           "job": "Front End",
           "stars": 4,
           "gender": "male",
-          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          "skills": ["HTML", "CSS", "JS", "TSC", "C#", "JAVA",".NET"]
         },
         {
           "name": "Amr Hendawy",
@@ -565,7 +521,7 @@
           "job": "JavaScript Developer",
           "stars": 5,
           "gender": "male",
-          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          "skills": ["HTML", "CSS", "JS", "TSC", "C#", "JAVA",".NET"]
         },
         {
           "name": "Eye Radwan",
@@ -574,7 +530,7 @@
           "job": "Full Stack",
           "stars": 3,
           "gender": "female",
-          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          "skills": ["HTML", "CSS", "JS", "TSC", "C#", "JAVA",".NET"]
         },
         {
           "name": "Osama Mohamed",
@@ -583,7 +539,7 @@
           "job": "Back End",
           "stars": 3,
           "gender": "male",
-          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores etreiciendis voluptatum, amet est natus quaerat ducimus"
+          "skills": ["HTML", "CSS", "JS", "TSC", "C#", "JAVA",".NET"]
         }
       ],
       "footer": {

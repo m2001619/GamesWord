@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, {createContext, useState} from "react";
 import json from "./.json";
 import Header from "./Header/Header";
 import Landing from "./Landing/Landing";
@@ -19,60 +19,44 @@ import Footer from "./Footer/Footer";
 import Search from "./Search/Search";
 
 export const context = createContext(null);
-function App() {
-  const [header, setHeader] = useState(json.header);
-  const [landing, setLanding] = useState(json.landing);
-  const [article, setArticle] = useState(json.article);
-  const [gallery, setGallery] = useState(json.gallery);
-  const [features, setFeatures] = useState(json.features);
-  const [testimonials, setTestimonials] = useState(json.testimonials);
-  const [games, setGames] = useState(json.games);
-  const [services, SetServices] = useState(json.services);
-  const [ourSkills, setOurSkills] = useState(json.ourSkills);
-  const [howItWork, setHowItWork] = useState(json.howItWork);
-  const [events, setEvents] = useState(json.events);
-  const [pricingPlans, setPricingPlans] = useState(json.pricingPlans);
-  const [topVideos, setTopVideos] = useState(json.topVideos);
-  const [awesomeStats, setAwesomeStats] = useState(json.awesomeStats);
-  const [discount, setDiscount] = useState(json.discount);
-  const [users, setUsers] = useState(json.users);
-  const [footer, setFooter] = useState(json.footer);
 
+function App() {
+  console.count("Re-render App");
+  const [users, setUsers] = useState(json.users);
   const [render, setRender] = useState(true);
+
+
   const getUserData = (data) => {
-    if (data) {
-      data.stars = 1;
-      setUsers((e) => {
-        e.push(data);
-        return e;
-      });
-    }
+    setUsers((prevState) => {
+      prevState.push({...data, stars: 1});
+      return prevState;
+    });
     setRender((e) => !e);
   };
-  useEffect(() => {}, [render]);
+
 
   return (
     <context.Provider
-      value={{ getUserData: getUserData, users: users }}
+      value={{ getUserData: getUserData, users: users}}
       className="App"
     >
-      <Header props={header} />
-      <Landing props={landing} />
-      <Search />
-      <Articles props={article} />
-      <Gallery props={gallery} />
-      <Features props={features} />
-      <Testimonials props={testimonials} users={users} />
-      <Games props={games} />
-      <Services props={services} />
-      <OurSkills props={ourSkills} />
-      <HowItWork props={howItWork} />
-      <Events props={events} setEvents={setEvents} />
-      <PricingPlans props={pricingPlans} />
-      <TopVideos props={topVideos} />
-      <AwesomeStats props={awesomeStats} />
-      <Discount props={discount} />
-      <Footer props={footer} />
+      <Header props={json.header} />
+      <Landing props={json.landing} />
+      <Search/>
+      <Articles props={json.article} />
+      <Gallery props={json.gallery} />
+      <Features props={json.features} />
+      <Testimonials props={json.testimonials} />
+      <Games props={json.games} />
+      <Services props={json.services} />
+      <OurSkills props={json.ourSkills} />
+      <HowItWork props={json.howItWork} />
+      <Events props={json.events} />
+      <PricingPlans props={json.pricingPlans} />
+      <TopVideos props={json.topVideos} />
+      <AwesomeStats props={json.awesomeStats} />
+      <Discount props={json.discount} />
+      <Footer props={json.footer} />
     </context.Provider>
   );
 }

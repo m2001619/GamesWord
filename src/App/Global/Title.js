@@ -1,22 +1,29 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
+import { borderWidth, classnames, textColor } from "tailwindcss-classnames";
 
-const Title = ({title}) => {
-  const style = {
-    title : `my-10 mx-auto border-2 border-black w-max py-4 px-6 font-bold text-2xl relative z-10 transition-all duration-700 hover:text-white hover:border-0 [&:hover>*]:top-0 [&:hover>*]:w-1/2 [&:hover>*]:h-full [&:hover>*]:-z-10 [&:hover>*]:translate-y-0 [&:hover>*]:rounded-none [&:hover>.before]:left-0 [&:hover>.after]:right-0`,
+const Title = ({ title }) => {
+  const beforeAfter = {
+    "absolute w-3 h-3 bg-mainColor top-1/2 rounded-[50%] -translate-y-1/2 transition-all duration-700": true,
+  };
 
-    titleBefore : `before absolute w-3 h-3 bg-mainColor top-1/2 rounded-[50%] -translate-y-1/2 transition-all duration-700 -left-4`,
-
-    titleAfter: `after absolute w-3 h-3 bg-mainColor top-1/2 rounded-[50%] -translate-y-1/2 transition-all duration-700 -right-4`,
-  }  
   return (
     <Fragment>
-        <h2 className={style.title}>
-            <span className={style.titleBefore}></span>
-            {title}
-            <span className={style.titleAfter}></span>
-        </h2>
+      <h2
+        className={classnames(
+          textColor("hover:text-white"),
+          borderWidth("border-2", "hover:border-0"),
+          "w-max relative z-10 my-10 mx-auto py-4 px-6 border-black font-bold text-2xl transition-all duration-700",
+          "[&:hover>*]:top-0 [&:hover>*]:w-1/2 [&:hover>*]:h-full [&:hover>*]:-z-10 [&:hover>*]:translate-y-0 [&:hover>*]:rounded-none",
+          "[&:hover>.before]:left-0",
+          "[&:hover>.after]:right-0"
+        )}
+      >
+        <span className={classnames(beforeAfter, "-left-4", "before")}></span>
+        {title}
+        <span className={classnames(beforeAfter, "-right-4", "after")}></span>
+      </h2>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Title;
+export default React.memo(Title);

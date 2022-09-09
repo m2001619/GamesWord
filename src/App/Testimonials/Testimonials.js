@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Title from "../Global/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-const Testimonials = ({ props, users }) => {
+import { context } from "../App";
+
+const Testimonials = ({ props }) => {
+  console.count("Re-render Testimonials");
+  const users2 = useContext(context).users;
   const style = {
     testimonials: `pt-mainPadding pb-20 bg-bgColor relative`,
     container: `container flex justify-center flex-wrap gap-mainGap pt-mainPadding`,
@@ -13,11 +17,14 @@ const Testimonials = ({ props, users }) => {
     job: `text-[#777] text-lg font-semibold`,
     text: `text-[#777] leading-relaxed text-lg font-semibold`,
   };
-  const cards = users.map((e, i) => {
-    const name = e.name.split(" ").map((e) => e.charAt(0).toUpperCase() + e.slice(1)).join(" ");
+  const cards = users2.map((e, i) => {
+    const name = e.name
+      .split(" ")
+      .map((e) => e.charAt(0).toUpperCase() + e.slice(1).toLowerCase())
+      .join(" ");
     let img =
       e.gender === `male`
-        ? `https://avatars.githubusercontent.com/u/10234267?v=4`
+        ? `https://princecroft.wilts.sch.uk/wp-content/uploads/2021/09/Mr-Brenchley.png.webp`
         : `https://cdn.myportfolio.com/a95391ef-a7ce-4970-b6f8-fb70896b7500/e1e241b2-f661-4224-8ea5-77986460a929_rw_1920.png?h=5b0372d8aaf62952b892f41e6d65ae72`;
     const starsArr = [];
     for (let j = 0; j < e.stars; j++) {
@@ -38,7 +45,14 @@ const Testimonials = ({ props, users }) => {
             );
           })}
         </div>
-        <p className={style.text}>{e.text}</p>
+        <div>
+          <h3 className="mb-2 font-bold">Skills</h3>
+          <ul className="grid grid-cols-2 gap-2">
+              {e.skills.map((skill,index) => (
+                  <li className="">{skill}</li>
+              ))}
+          </ul>
+        </div>
       </div>
     );
   });
@@ -49,4 +63,4 @@ const Testimonials = ({ props, users }) => {
     </div>
   );
 };
-export default Testimonials;
+export default React.memo(Testimonials);

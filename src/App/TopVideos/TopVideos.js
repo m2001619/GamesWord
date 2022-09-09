@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faShuffle} from "@fortawesome/free-solid-svg-icons";
+import { faShuffle } from "@fortawesome/free-solid-svg-icons";
 import React, { Fragment, useState } from "react";
 import Title from "../Global/Title";
 const TopVideos = ({ props }) => {
+  console.count("Re-render TopVideos");
   const defaultLink = `https://www.youtube.com/embed/` + props.videos[0].a.link;
   const [source, setSource] = useState(defaultLink);
   const style = {
@@ -63,4 +64,4 @@ const TopVideos = ({ props }) => {
     </div>
   );
 };
-export default TopVideos;
+export default React.memo(TopVideos);

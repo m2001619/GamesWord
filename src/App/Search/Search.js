@@ -5,6 +5,7 @@ import Title from "../Global/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 const Search = () => {
+  console.count("Re-render Search");
   const [term, setTerm] = useState("react");
   const [result, setResult] = useState([]);
   const prevState = usePrevState(term);
@@ -55,12 +56,16 @@ const Search = () => {
   }, [term, result.length, prevState]);
 
   const fetchResult = result.map((e, i) => {
-    const href = `https://en.wikipedia.org/wiki/${e.title.split(` `).join(`_`)}`;
+    const href = `https://en.wikipedia.org/wiki/${e.title
+      .split(` `)
+      .join(`_`)}`;
     return (
       <div className={style.card} key={i}>
         <img
           className={style.image}
-          src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3tGamDmzSv_01l1hrqjuPLGlrgHKIcUqVvg&usqp=CAU"}
+          src={
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3tGamDmzSv_01l1hrqjuPLGlrgHKIcUqVvg&usqp=CAU"
+          }
           alt=""
         />
         <div className={style.cardText}>
@@ -78,7 +83,6 @@ const Search = () => {
       </div>
     );
   });
-
 
   return (
     <div className={style.article} id="search">
@@ -98,4 +102,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default React.memo(Search);
