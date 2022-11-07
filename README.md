@@ -1,5 +1,6 @@
 # GamesWord
 ## Click to see design : https://m2001619.github.io/GamesWord/
 
+### used Language: JS 
 ### used FrameWork : React.js
-### used toolkit: TailwindCss, React Hook Form
+### used Toolkit: TailwindCss, React Hook Form
